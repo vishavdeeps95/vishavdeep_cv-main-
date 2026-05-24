@@ -1,0 +1,43 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.tex"
+      - "**/*.cls"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: false
+
+      - name: Rename output to cv.pdf
+        run: mv main.pdf cv.pdf
+
+      - name: Publish cv.pdf to pdf branch
+        run: |
+          set -e
+          mkdir -p /tmp/cv-out
+          cp cv.pdf /tmp/cv-out/cv.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Create or reset an orphan branch with just cv.pdf
+          git checkout --orphan pdf
+          git rm -rf . > /dev/null 2>&1 || true
+          cp /tmp/cv-out/cv.pdf cv.pdf
+          git add cv.pdf
+          git commit -m "Build CV from ${GITHUB_SHA}"
+          git push --force origin pdf
