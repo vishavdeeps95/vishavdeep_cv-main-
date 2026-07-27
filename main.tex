@@ -1,6 +1,7 @@
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{microtype}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -13,13 +14,14 @@
 
 \usepackage{xcolor}
 \definecolor{shadecolor}{RGB}{150,150,150}
+\definecolor{osugray}{HTML}{666666}
 \usepackage[left=0.75in,top=0.1in,right=0.75in,bottom=0.5in]{geometry}
 %\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
 \renewcommand{\section}[1]{%
   \goodbreak\vspace{10pt}%
   \par\noindent\textbf{\textsc{\large\makebox[\linewidth][l]{#1}}}\vspace{2pt}\par\nointerlineskip\noindent%
   %\nointerlineskip
-\rule{\textwidth}{0.5pt}
+{\color{osuscarlet}\rule{\textwidth}{0.5pt}}%
   \vspace{2pt}\par}
   
 \usepackage{fancyhdr} % Add this to your preamble
@@ -62,20 +64,20 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
-
-\vspace*{-1.5mm}
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+% \vspace*{3mm}
+\vspace{4pt}
+% %\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Research Interests}{}{}
-Industrial Organization, Applied Microeconomics, Economics of Regulation, Oligopoly Theory, and Development Economics.
+Industrial Organization, Economics of Regulation, Oligopoly Theory, and Applied Microeconomics.
 \end{rSection}
 
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Education}{}{}
 \vspace{-1em}
-\item [$\bullet$] \textbf{The Ohio State University\hspace{89mm} (2022$-$present)}
+\item [$\bullet$] \textbf{The Ohio State University\hspace{86mm} (Expected 2027)}
 \vspace{-0.5em}
 \item \textit{Ph.D. in Applied Economics} %\texttt{[currently pursuing]}
 %\vspace{-0.5em}
@@ -148,28 +150,12 @@ Using the village level data of Indian Human Development Survey-II
 (2011-12), showed a positive and significant impact  of distance between the village
 and its district headquarters on the provision of public goods in a village.
 \fi
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
-\begin{rSection}{Publications}
-\vspace{-1em}
-\item[$\bullet$] \textbf{Sharma, V.} and Dastidar, K. G. (2026). \href{https://doi.org/10.1111/manc.70022}{The Optimal Bribe: Price Versus Quantity Competition in Oligopolies.} \textit{The Manchester School}, 94(4), 378--397.
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 
 
-
-% \item [$\bullet$] Sundaram, R., \textbf{Sharma, V.} \& Saraswat, A. 
-% \href{https://drive.google.com/file/d/1v8IriWUkadASb5fl5qtLGk0uhpbYkuyh/view?usp=drivesdk}{Anthropometric Measurements for Children in Nuclear and Joint Families}, Indian Journal of Economics, No. 399, Vol. C (Part-IV), April 2020: 533-546.
-% \item [$\bullet$] Janbandhu, I., Kurian, P. \& \textbf{Sharma, V.} \href{https://drive.google.com/file/d/10PgvWCtAsoJPDBS12s9uFgRGTQAZpd2_/view?usp=sharing}{Analysis on Farmer Suicides: A study with reference to the year 2015\footnote{The blue text is hyperlinked}}, International Journal of Management Studies, ISSN (Print), 2249-0302.
-
-%\begin{rSubsection}{\href{https://drive.google.com/file/d/1v8IriWUkadASb5fl5qtLGk0uhpbYkuyh/view?usp=drivesdk}{Anthropometric Measurements for Children in Nuclear and Joint Families}}{}{Published in ‘Indian Journal of Economics’}{Apr, 2020}
-%Using the Indian Human Development Survey-II(2011-12) data, compared anthropometric outcomes of the children living in the joint family against those living in a nuclear family, the result favors the joint family.
-%\end{rSubsection}
-%\begin{rSubsection}{\href{https://drive.google.com/file/d/10PgvWCtAsoJPDBS12s9uFgRGTQAZpd2_/view?usp=sharing}{Analysis on Farmer Suicides: A study with reference to the year 2015\footnote{Blue color is Hyperlinked.}}} {}{Published in ‘International Journal of Management Studies (IJMS)’}{Oct, 2018}
-%Under the supervision of Professor Suddhasil Siddhanta, the linkages of farmer suicides with various factors had been explored for the year 2015. The analysis suggests, farmers tend not to opt for suicides when production, productivity, and irrigation facilities of specific crops are improved. Normal rainfall and excess rainfall shows less likelihood of farmer suicides compared to non-farmer suicides. Based on our analysis, the loan waiver in the states of Andhra Pradesh and Telangana could not significantly determine the fall or rise in suicides of farmers compared to non-farmers.
-%\end{rSubsection}
-\end{rSection}
-
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Working Papers}
 %\begin{rSubsection}{Effectiveness and Efficiency of the Farm Income Forecast Revisions} {AEDE, OSU}{2nd year paper (\texttt{To be submitted to} Agricultural Finance Review)}{Spring 2024}
 %\item[$\bullet$] This study evaluates the predictability and effectiveness of USDA's short-term farm income forecast revisions from 1981 to 2022. Using Theil’s U coefficients, the analysis revealed that revised forecasts consistently reduce errors compared to initial forecasts. The study also explored the presence of information rigidity and strategic smoothing, providing insights into the predictability of these revisions.
@@ -189,25 +175,18 @@ and its district headquarters on the provision of public goods in a village.
 % competition.
 % \end{rSubsection}
 \vspace{-1em}
+\item[$\bullet$] \href{https://dx.doi.org/10.2139/ssrn.6967764}{Price Floors and the Existence of Bertrand Equilibrium under Subadditive Costs} (Revise and resubmit, \textit{Journal of Mathematical Economics})
 
- \item[$\bullet$] \textbf{Sharma, V.} (2026). \href{https://dx.doi.org/10.2139/ssrn.6880904}{When Does Antitrust Enforcement Discipline Common
-Ownership? A General Equilibrium Analysis.} (Under review)
+ \item[$\bullet$] \href{https://dx.doi.org/10.2139/ssrn.6880904}{When Does Antitrust Enforcement Discipline Common
+Ownership? A General Equilibrium Analysis} (Under review)
 
-\item[$\bullet$] \textbf{Sharma, V.} (2026). A Demand--Cost Pass-Through Identity. (Under review)
-
-\item[$\bullet$] \textbf{Sharma, V.} (2026). Price Floors and the Existence of Bertrand Equilibrium under Subadditive Costs. (Revise and resubmit, \textit{Journal of Mathematical Economics})
-
-\item[$\bullet$] Rose, A., \textbf{Sharma, V.} \& Dormady, N. (2026). \href{https://dx.doi.org/10.2139/ssrn.6730418}{The Role of Optimal Disaster Resilience and Recovery in Estimating Benefits of Climate Adaptation.} (Under review)
-
-% \item[$\bullet$] \textbf{Sharma, V.} (2026). The Cournot Diagnostic: A Cross-Partial Identity.
+\item[$\bullet$] \href{https://dx.doi.org/10.2139/ssrn.6770864}{A Demand--Cost Pass-Through Identity} (Under review)
 
 
 
-\item[$\bullet$] \textbf{Sharma, V.} (2026). Strategic Bribery and Market Entry in Emerging Economies: Theory and Evidence.
+\item[$\bullet$] \href{https://dx.doi.org/10.2139/ssrn.6730418}{The Role of Optimal Disaster Resilience and Recovery in Estimating Benefits of Climate Adaptation.} with Adam Rose and Noah Dormady (Under review)
 
-\item[$\bullet$] \textbf{Sharma, V.} (2026). Natural Disaster and Market Structure: Theory and Evidence from Florida Hurricanes.
-
-\item[$\bullet$] Rose, A., Dormady, N., Kajitani, Y., Liu, H., Tatano, H., Watson, M., \& \textbf{Sharma, V.} (2025). \href{https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5925602}{Baselines for Economic Resilience Measurement and Their Role in Distinguishing Resilience from Recovery.} \textit{Available at SSRN 5925602.}
+\item[$\bullet$] \href{https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5925602}{Baselines for Economic Resilience Measurement and Their Role in Distinguishing Resilience from Recovery.} with Adam Rose, Noah Dormady, Yoshio Kajitani, Huan Liu, Hirokazu Tatano, Maria Watson (Revise and resubmit, IDRiM Journal)
 
 
 
@@ -227,13 +206,44 @@ Ownership? A General Equilibrium Analysis.} (Under review)
 % \end{rSubsection}
 \end{rSection}
 
+\begin{rSection}{Work in Progress}
+\vspace{-1em}
+\item[$\bullet$] Strategic Bribery and Market Entry in Emerging Economies: Theory and Evidence.
+
+\item[$\bullet$] Natural Disaster and Market Structure: Theory and Evidence from Florida Hurricanes.
+
+
+
+
+
+
+\end{rSection}
+
+\begin{rSection}{Publications}
+\vspace{-1em}
+\item[$\bullet$] \href{https://doi.org/10.1111/manc.70022}{The Optimal Bribe: Price Versus Quantity Competition in Oligopolies} with Krishnendu Ghosh Dastidar \textit{The Manchester School}, 94(4), 378--397.
+
+
+
+% \item [$\bullet$] Sundaram, R., \textbf{Sharma, V.} \& Saraswat, A. 
+% \href{https://drive.google.com/file/d/1v8IriWUkadASb5fl5qtLGk0uhpbYkuyh/view?usp=drivesdk}{Anthropometric Measurements for Children in Nuclear and Joint Families}, Indian Journal of Economics, No. 399, Vol. C (Part-IV), April 2020: 533-546.
+% \item [$\bullet$] Janbandhu, I., Kurian, P. \& \textbf{Sharma, V.} \href{https://drive.google.com/file/d/10PgvWCtAsoJPDBS12s9uFgRGTQAZpd2_/view?usp=sharing}{Analysis on Farmer Suicides: A study with reference to the year 2015\footnote{The blue text is hyperlinked}}, International Journal of Management Studies, ISSN (Print), 2249-0302.
+
+%\begin{rSubsection}{\href{https://drive.google.com/file/d/1v8IriWUkadASb5fl5qtLGk0uhpbYkuyh/view?usp=drivesdk}{Anthropometric Measurements for Children in Nuclear and Joint Families}}{}{Published in ‘Indian Journal of Economics’}{Apr, 2020}
+%Using the Indian Human Development Survey-II(2011-12) data, compared anthropometric outcomes of the children living in the joint family against those living in a nuclear family, the result favors the joint family.
+%\end{rSubsection}
+%\begin{rSubsection}{\href{https://drive.google.com/file/d/10PgvWCtAsoJPDBS12s9uFgRGTQAZpd2_/view?usp=sharing}{Analysis on Farmer Suicides: A study with reference to the year 2015\footnote{Blue color is Hyperlinked.}}} {}{Published in ‘International Journal of Management Studies (IJMS)’}{Oct, 2018}
+%Under the supervision of Professor Suddhasil Siddhanta, the linkages of farmer suicides with various factors had been explored for the year 2015. The analysis suggests, farmers tend not to opt for suicides when production, productivity, and irrigation facilities of specific crops are improved. Normal rainfall and excess rainfall shows less likelihood of farmer suicides compared to non-farmer suicides. Based on our analysis, the loan waiver in the states of Andhra Pradesh and Telangana could not significantly determine the fall or rise in suicides of farmers compared to non-farmers.
+%\end{rSubsection}
+\end{rSection}
+
 %------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	Academic Projects SECTION
 %----------------------------------------------------------------------------------------
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Conferences}{}{}
 \vspace{-1em}
 \item[$\bullet$] 7\textsuperscript{th} World Congress of Environmental and Resource Economists (WCERE 2026), Lisbon, Portugal. \textit{(Paper to be presented by coauthor)} \hfill \textit{Jun 29--Jul 3, 2026}
@@ -257,16 +267,16 @@ Ownership? A General Equilibrium Analysis.} (Under review)
 in Management, Economics and Accounting \href{https://drive.google.com/file/d/1ksOV7DJxA2Em14ers2X-_QmYleGxwBlw/view}{(MEACONF)}, Amsterdam, Netherlands\hspace{97mm} \textit{Nov, 2021}
 \end{rSection}
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Invited Talks and Seminars}{}{}
 \vspace{-1em}
 \item[$\bullet$] Invited Speaker, “2-Days International Research Workshop,” EconTricks, Shyama Prasad Mukherjee College for Women, University of Delhi. \hspace{79mm} \textit{Sep 27, 2025} 
 \end{rSection}
 
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Outreach and Extension}
 \vspace{-1em}
 \item [$\bullet$] \textbf{Sharma, V.} and Sheldon, I. (2025). \href{https://go.osu.edu/cfaesposters2025}{\textcolor{blue}{Strategic Bribery and Market Entry in Emerging Economies: A Game-Theoretic Analysis}}, Poster presentation at the CFAES Research Poster Competition, The Ohio State University.
@@ -278,8 +288,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 \item [$\bullet$] Katchova, A., Fang, X., Ju, R., Sun, Z. and \textbf{Sharma, V.} (2024). \href{https://aede.osu.edu/about-us/publications/preserving-ohio-farms-and-ohio-farmlands}{Preserving Ohio Farms and Ohio Farmlands}, Presentation at the Farm Income Enhancement Program.
 \end{rSection}
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Media Mentions and News Articles}
 \vspace{-1em}
     \item[$\bullet$] AAEA Blog. \href{http://blog.aaea.org/2024/04/members-in-news-april-29-2024.html}{\textit{Members in the News: April 2024.}} April 29, 2024.
@@ -306,8 +316,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 %----------------------------------------------------------------------------------------
 %	Internships SECTION
 %----------------------------------------------------------------------------------------
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Research Experience}
 \begin{rSubsection}{Graduate Research Assistant, John Glenn College of Public Affairs}{(Fall 2025$-$Present)}{}{}
 \item[$\bullet$] Assist Prof. Noah Dormady on research projects involving survey design, policy evaluation, and advanced modeling in production economics.
@@ -327,8 +337,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 
 
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Teaching Experience}
 \begin{rSubsection}{Graduate Teaching Assistant, The Ohio State University}{(Fall 2024)}{}{}
 \item[$\bullet$] Taught R lab sessions for graduate students in Statistics and Econometrics (AEDECON 6110, Autumn 2024); prepared selected lectures and homework assignments.
@@ -386,8 +396,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 \end{rSection}
 
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{HONORS AND FELLOWSHIPS}{}{}
 \vspace{-1em}
 % \item[$\bullet$] Achieved All India Rank \href{https://drive.google.com/file/d/1EytyK-OBLFunnDPjoGIbF83Hy-in4mtm/view?usp=sharing}{2} in Ph.D. in Economics interview conducted by CITD, JNU.\hspace{8mm}\textit{Dec, 2021}
@@ -400,8 +410,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 % \textit{Total available seats are 19 only.}
 \end{rSection}
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Technical Skills}{}{}
 \vspace{-1em}
 \item[$\bullet$] \textbf{Programming Languages \& Softwares}: R, STATA, Python, Matlab, \LaTeX, MS$-$Office 
@@ -409,20 +419,20 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 \item[$\bullet$] \textbf{Languages:} English (Advanced), Hindi (Native), Sanskrit (Intermediate)
 \end{rSection}
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{Leadership and Service}
 \vspace{-1em}
 \item[$\bullet$] Founder and Instructor of the YouTube channel \href{https://www.youtube.com/watch?v=XO6qivVX_QQ&t=184s}{Economics Learning Centre}, which provides free video lectures for economics aspirants. \hspace{89mm}\textit{Since July, 2018}
 
 
 \item[$\bullet$]Head of the Sports Committee, Gokhale Institute of Politics and Economics. \hspace{4mm} \textit{Aug, 2017$-$July, 2018}
-\item[$\bullet$] Awarded \href{https://drive.google.com/file/d/1Gv3T3akMSvFa9WFbGvNdwGkmbNq-9oCK/view?usp=sharing}{Sportsman of the Year}, Gokhale Institute of Politics and Economics. \hspace{30mm}\textit{2018}
+% \item[$\bullet$] Awarded \href{https://drive.google.com/file/d/1Gv3T3akMSvFa9WFbGvNdwGkmbNq-9oCK/view?usp=sharing}{Sportsman of the Year}, Gokhale Institute of Politics and Economics. \hspace{30mm}\textit{2018}
 
 %\item[$\bullet$]Volunteered for \href{https://drive.google.com/file/d/1H--l9LfKmUlzo7mvG5PpE5K-tB9cKDSe/view?usp=sharing}{'Feeding India'} during Post-Graduation in Pune. \hspace{54mm}\textit{2017}
 \end{rSection}
 
-% \rule{\textwidth}{2pt}
+% %\rule{\textwidth}{2pt}
 % \vspace*{-2.5mm}
 % \begin{rSection}{Others}
 % \vspace{-1em}
@@ -430,8 +440,8 @@ in Management, Economics and Accounting \href{https://drive.google.com/file/d/1k
 % \item[$\bullet$]\textbf{Non-Academic Interests:} Playing Outdoor Sports, Trekking and Cooking.
 % \end{rSection}
 
-\rule{\textwidth}{2pt}
-\vspace*{-2.5mm}
+%\rule{\textwidth}{2pt}
+% \vspace*{-2.5mm}
 \begin{rSection}{References}
 \item [$\bullet$]Ian Sheldon\\
 Professor and Andersons Chair of Agricultural Marketing, Trade and Policy\\
