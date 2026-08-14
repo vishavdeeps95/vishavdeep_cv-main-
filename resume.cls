@@ -116,7 +116,7 @@
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
   }
-  \begin{list}{$\cdot$}{\leftmargin=2.25em} % \cdot used for bullets, no indentation
+  \begin{list}{}{\leftmargin=1.25em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
