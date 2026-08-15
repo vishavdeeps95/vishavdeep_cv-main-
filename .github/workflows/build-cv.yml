@@ -1,5 +1,4 @@
 name: Build CV
-
 on:
   push:
     branches: [main]
@@ -7,31 +6,25 @@ on:
       - "**/*.tex"
       - "**/*.cls"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
-
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
           latexmk_use_xelatex: false
-
       - name: Rename output to cv.pdf
         run: mv main.pdf cv.pdf
-
       # xu-cheng/latex-action runs as root inside Docker, leaving root-owned
       # files behind. Reclaim the workspace so the publish step can overwrite.
       - name: Fix workspace ownership
         run: sudo chown -R "$(id -u):$(id -g)" "$GITHUB_WORKSPACE"
-
       - name: Publish cv.pdf to pdf branch
         run: |
           set -e
@@ -47,3 +40,24 @@ jobs:
           git add cv.pdf
           git commit -m "Build CV from ${GITHUB_SHA}"
           git push --force origin pdf
+      - name: Publish cv.pdf to website repo
+        env:
+          WEBSITE_TOKEN: ${{ secrets.WEBSITE_TOKEN }}
+        run: |
+          set -e
+          git clone --depth 1 \
+            "https://x-access-token:${WEBSITE_TOKEN}@github.com/vishavdeeps95/vishavdeeps95.github.io.git" \
+            /tmp/website
+          mkdir -p /tmp/website/assets
+          sudo cp /tmp/cv-out/cv.pdf /tmp/website/assets/cv.pdf
+          sudo chown "$(id -u):$(id -g)" /tmp/website/assets/cv.pdf
+          cd /tmp/website
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets/cv.pdf; then
+            echo "cv.pdf unchanged, nothing to push"
+            exit 0
+          fi
+          git add assets/cv.pdf
+          git commit -m "Update cv.pdf from CV build ${GITHUB_SHA}"
+          git push origin HEAD:master
